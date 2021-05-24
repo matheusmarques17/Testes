@@ -34,7 +34,7 @@ public class App {
        
       
         // Texto padrão para insert
-        String insertStatement = "INSERT INTO Recurso (fkEquipamento, consumoRam, consumoCpu, consumoDisco, momento) VALUES ( ?, ?, ?, ?)";
+        String insertStatement = "INSERT INTO Recurso (fkEquipamento, consumoRam, consumoCpu, consumoDisco, momento) VALUES ( ?, ?, ?, ?, ?)";
         
         // Utilizamos o comando "update" para inserir e/ou atualizar registros.
         // Podemos utilizar variavéis como o exemplo abaixo:
