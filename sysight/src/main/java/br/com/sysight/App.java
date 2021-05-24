@@ -17,16 +17,20 @@ public class App {
     public static void main(String[] args) {
    
         Conexao con = new Conexao();
+        Conexa2 con2 =  new Conexa2();
+        
         JdbcTemplate config = new JdbcTemplate(con.getDatasource());
+        
+        JdbcTemplate config2 = new JdbcTemplate(con2.getDatasource());
 
         Recurso recurso = new Recurso();
 
         // Parametros para o primeiro insert
    
         String momento =  recurso.getMomento();
-        String consumoRam = String.format("%.2f", recurso.getConsumoRam());
-        String consumoCpu = String.format("%.2f", recurso.getConsumoCPU());
-        String consumoDisco = String.format("%.2f", recurso.getConsumoDisco());
+        String consumoRam = String.format("%.2f%%", recurso.getConsumoRam());
+        String consumoCpu = String.format("%.2f%%", recurso.getConsumoCPU());
+        String consumoDisco = String.format("%.2f%%", recurso.getConsumoDisco());
        
       
         // Texto padrão para insert
@@ -36,6 +40,7 @@ public class App {
         // Podemos utilizar variavéis como o exemplo abaixo:
                 //ALTERE A FK DE ACORDO COM SEU EQUIPAMENTO
                 config.update(insertStatement, consumoRam, consumoCpu, consumoDisco, momento);
+                config2.update(insertStatement, consumoRam, consumoCpu, consumoDisco, momento);
               
 
         // Para buscar informações devemos utilizar o comando queryForList ou query,
