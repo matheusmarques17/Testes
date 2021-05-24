@@ -45,10 +45,9 @@ public class App {
 
         // Para buscar informações devemos utilizar o comando queryForList ou query,
         // exemplo de uso do queryForList:
-        List recursoSimpleUse = config.queryForList("SELECT * FROM Recurso");
+
 
         // Exibindo o resultado
-        System.out.println("Dados de sua máquina:");
-        System.out.println(recursoSimpleUse);
+        System.out.println("Sucesso");
     }
 }

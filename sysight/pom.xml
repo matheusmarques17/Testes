@@ -51,6 +51,12 @@
             <artifactId>spring-jdbc</artifactId>
             <version>5.0.5.RELEASE</version>
         </dependency>
+        
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.21</version>
+        </dependency>
 
     </dependencies>
     <name>java-swing-teste</name>
